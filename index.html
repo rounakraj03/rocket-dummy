@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <title>Space wensite</title>
+</head>
+<body>
+    
+    <header class="header" id="header" >
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-rocket-2-line"></i>Space
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Home</a>
+                    </li>
+                    
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Features</a>
+                    </li>
+                        
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Pricing</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Contact</a>
+                    </li>
+                </ul> 
+
+                <a href="#" class="nav__button" id="nav-button">Login</a>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-apps-2-line"></i>
+            </div>
+        </nav>
+    </header>
+     
+    <main class="main">
+        <section class="home">
+            <div class="home__container container">
+                <div class="home__content">
+                    <h3 class="home__subtitle">
+                        NAVIGATE THE UNIVERSE
+                    </h3>
+
+                    <h1 class="home__title">
+                        <span>
+                            Start Exploring <br>
+                            Infinite Space
+                        </span>
+
+                        <img src="line.svg" alt="">
+                    </h1>
+
+                    <p class="home__description">
+                        Start your exploration in space, navigate 
+                        and discover all the wonders of the 
+                        universe.
+                    </p>
+
+                    <a href="#" class="home__button" >
+                        Get Started
+                    </a>
+                </div>
+
+                <div class="home__images">
+                    <img src="points-space.svg" alt="image" class="home__points">
+                    <img src="planet.svg" alt="image" class="home__planet-2">
+                    <img src="planet.svg" alt="image" class="home__planet-1">
+                    <img src="rocket.svg" alt="image" class="home__rocket">
+                </div>
+            </div>
+
+            <img src="clouds-1.svg" alt="image" class="home__cloud-1"> 
+            <img src="clouds-2.svg" alt="image" class="home__cloud-2"> 
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const navMenu = document.getElementById('nav-menu'),
+          navToggle =document.getElementById('nav-toggle'),
+          navClose = document.getElementById('nav-close')
+
+/*menu show*/ 
+if(navToggle){
+    navToggle.addEventListener('click', ()=>{
+        navMenu.classList.add('show-menu')
+    })
+}
+
+/*menu hidden*/ 
+if(navClose){
+    navClose.addEventListener('click', ()=>{
+       navMenu.classList.remove('show-menu')
+    })
+}
+
+/*gsap animation*/
+gsap.from('.home__points',1.5,{opacity: 0, y: -300, delay: .2})
+gsap.from('.home__rocket',1.5,{opacity: 0, y: 300, delay: .3})
+gsap.from('.home__planet-1',1.5,{opacity: 0, x: -200, delay: .8})
+gsap.from('.home__planet-2',1.5,{opacity: 0, x: 200, delay: 1})  
+gsap.from('.home__cloud-1',1.5,{opacity: 0, y: 200, delay: 1.2})  
+gsap.from('.home__cloud-2',1.5,{opacity: 0, x: 200, delay: 1.3})  
+gsap.from('.home__content',1.5,{opacity: 0, y: -100, delay: 1.4}) 
+gsap.from('.home__title img',1.5,{opacity: 0, x: 100, delay: 1.6})  
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
